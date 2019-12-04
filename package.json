@@ -10,5 +10,8 @@
   ],
   "keywords": [
     "yeoman-generator"
-  ]
+  ],
+  "dependencies": {
+    "yeoman-generator": "^4.2.0"
+  }
 }

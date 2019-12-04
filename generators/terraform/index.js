@@ -8,18 +8,20 @@ module.exports = class extends Generator {
   }
 
   async initializing() {
-    console.log(this.tf_admin)
+
   }
 
   async prompting() {
     if (!this.tf_admin) {
-      this.answers = this.prompt([
+      const answers = await this.prompt([
         {
           type: 'input',
           name: 'tf_admin',
           message: 'No TF_ADMIN env variable is set. Please enter TF_ADMIN:'
         }
       ])
+
+      this.tf_admin = answers.tf_admin
     }
   }
 
@@ -30,7 +32,7 @@ module.exports = class extends Generator {
   }
 
   async writing() {
-    const { tf_admin } = this.answers
+    const { tf_admin } = this
 
     await this.fs.copyTpl(
       this.templatePath('backend.tf'),
