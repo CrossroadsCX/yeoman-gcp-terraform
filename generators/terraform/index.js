@@ -1,5 +1,4 @@
-import Generator from 'yeoman-generator'
-import chalk from 'chalk'
+const Generator = require('yeoman-generator')
 
 module.exports = class extends Generator {
   constructor(args, opts) {

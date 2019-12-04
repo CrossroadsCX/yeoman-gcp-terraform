@@ -5,6 +5,9 @@
   "repository": "git@github.com:CrossroadsCX/yeoman-gcp-terraform.git",
   "author": "Chris Birk <cmbirk@gmail.com>",
   "license": "MIT",
+  "files": [
+    "generators"
+  ],
   "keywords": [
     "yeoman-generator"
   ]
